@@ -5,6 +5,7 @@ import App from "./App"
 import Home from './Home'
 import Landingpage from './Landingpage'
 import Variables from './Components/Variables'
+import Todo from './Components/Todo'
 
 
 createRoot(document.getElementById('root')).render(
@@ -13,6 +14,7 @@ createRoot(document.getElementById('root')).render(
     {/* <App></App> */}
     {/* <Home/>
     <Landingpage/> */}
-    <Variables/>
+    {/* <Var iables/> */}
+    <Todo/>
   </StrictMode>,
 )

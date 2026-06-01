@@ -1,6 +1,7 @@
 import { FaEye } from "react-icons/fa";
 import hero from "./assets/hero.png"
 import { BsAirplaneEnginesFill } from "react-icons/bs";
+import Navbar from "./Components/Navbar";
 
 function Landingpage() {
     const user = "students"
@@ -16,6 +17,7 @@ function Landingpage() {
 
     return (
         <>
+        {/* <Navbar/> */}
         <div style={mysty}>
             {/* <h1>Welcome to your landingpage {2 *2}</h1> */}
             <div style={mysty.student}>{user}</div>

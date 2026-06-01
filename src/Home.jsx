@@ -1,9 +1,11 @@
+import Navbar from "./Components/Navbar"
 import Button from "./Props/Button"
 import Input from "./Props/Input"
 
 function Home (){
     return (
         <div>
+            {/* <Navbar/> */}
             <h1>Welcome to your Home page</h1>
             <p className="styl">styling in index.css file</p>
             <p style={{fontSize:"50px", fontWeight:"bolder", wordSpacing:"20px"}}>imline styling</p>

@@ -9,8 +9,12 @@ import { useLocation } from "react-router-dom"
 import Dashboard from "./Components/Dashboard"
 import Todo from "./Components/Todo"
 import Variables from "./Components/Variables"
+import Http from "./Components/Http"
+import Onepost from "./Components/Onepost"
+
 
 function App() {
+ 
   const location = useLocation()
   console.log(location);
  const pathnames = ['/landingpage', '/','/sportify']
@@ -30,6 +34,8 @@ function App() {
         {pathnames.includes(location.pathname) && <Navbar/>} 
       <Routes>
         <Route path="/landingpage" element={<Landingpage/>} />
+        <Route path="/http" element={<Http/>} />
+        <Route path="/onepost/:id" element={<Onepost/>} />
         <Route path="/" element={<Home/>} />
         <Route path="/sportify" element={<Sportify/>} />
         <Route path="*" element={<Notfound/>}/>

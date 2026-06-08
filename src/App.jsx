@@ -11,6 +11,7 @@ import Todo from "./Components/Todo"
 import Variables from "./Components/Variables"
 import Http from "./Components/Http"
 import Onepost from "./Components/Onepost"
+import Formik from "./Components/Formik"
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
         <Route path="/onepost/:id" element={<Onepost/>} />
         <Route path="/" element={<Home/>} />
         <Route path="/sportify" element={<Sportify/>} />
+        <Route path="/form" element={<Formik/>} />
         <Route path="*" element={<Notfound/>}/>
         <Route path="/home" element={<Dashboard/>} >
          <Route path="/home/profile" element={<Todo/>} />

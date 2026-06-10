@@ -1,9 +1,32 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import { useFormik } from 'formik'
 import * as yup from "yup"
+import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
+import { toast } from 'react-toastify'
 
 
 const Formik = () => {
+    const [alluser, setallUser] = useState([])
+    const navigate = useNavigate()
+    useEffect(() => {
+     const newuset = JSON.parse(localStorage.getItem("users")) 
+        console.log(newuset);
+        if (newuset) {
+            setallUser(newuset)
+        }else{
+            setallUser([])
+        }
+    }, [])
+    
+    // const [user, setUser] = () =>{
+    //     user = localStorage.setItem('currentUser')
+    //     console.log(user);
+    // }
+    // const [loggedInUser , setLoggedInUser] = ()=> {
+    //     const saved = localStorage.getItem('currentUser')
+    //     setLoggedInUser(saved)
+    // }
     const formik = useFormik({
         initialValues:{
             username:"",
@@ -17,11 +40,23 @@ const Formik = () => {
         }),
         onSubmit:(values)=>{
          console.log(values);
+         setallUser([...alluser, values])
+         console.log(alluser);
+          axios.post("http://localhost:4567/users",values)
+          .then((res)=>{
+            console.log(res);
+            toast.success("user signup successful")
+          }).catch((err)=>{
+            console.log(err);
+            
+          })
+        //  localStorage.setItem("users",JSON.stringify(alluser))
         formik.setValues({
             username:"",
             email:"",
             password:""
         })
+        // navigate("/login")
         }
     }) 
 

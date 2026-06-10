@@ -1,0 +1,23 @@
+{
+  "users": [
+    {
+      "username": "dev_yeesha",
+      "email": "aishatadekunle877@gmail.com",
+      "password": "Devyeesha@1",
+      "id": "-O_3Gok7u9g"
+    },
+    {
+      "username": "tolani",
+      "email": "tholani@gmail.com",
+      "password": "Tholai@1",
+      "id": "L4OU68L1gjg"
+    },
+    {
+      "username": "Tolani",
+      "email": "tolani@gmail.com",
+      "password": "Tholai@1",
+      "id": "fkZblfiBVH4"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

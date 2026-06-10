@@ -12,6 +12,7 @@ import Variables from "./Components/Variables"
 import Http from "./Components/Http"
 import Onepost from "./Components/Onepost"
 import Formik from "./Components/Formik"
+import { ToastContainer } from "react-toastify"
 
 
 function App() {
@@ -32,7 +33,8 @@ function App() {
       <p className="ptag">Personal css file</p>
       <p style={{color:"green", fontWeight:"bold" , fontFamily:"monospace"}}>Inline styling</p>
       <p style={sty}>{username}</p> */}
-        {pathnames.includes(location.pathname) && <Navbar/>} 
+        {pathnames.includes(location.pathname) && <Navbar/>}
+        <ToastContainer/> 
       <Routes>
         <Route path="/landingpage" element={<Landingpage/>} />
         <Route path="/http" element={<Http/>} />
